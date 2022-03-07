@@ -37,24 +37,26 @@ class HandleCollisionsAction(Action):
             cast (Cast): The cast of Actors in the game.
         """
         
-        score = cast.get_first_actor("scores")
+        score = cast.get_actors("scores")
         food = cast.get_first_actor("foods")
         cycles = cast.get_actors("cycles")
         cycle1 = cycles[0]
         cycle2 = cycles[1]
         head1 = cycle1.get_head()
         head2 = cycle2.get_head()
+        score1 = score[0]
+        score2 = score[1]
 
         if head1.get_position().equals(food.get_position()):
             points = food.get_points()
             cycle1.grow_tail(points)
-            score.add_points(points)
+            score1.add_points(points)
             food.reset()
 
         elif head2.get_position().equals(food.get_position()):
             points = food.get_points()
             cycle2.grow_tail(points) 
-            score.add_points(points)
+            score2.add_points(points)
             food.reset()
     
     def _handle_segment_collision(self, cast):
