@@ -25,7 +25,7 @@ class Score(Actor):
             points (int): The points to add.
         """
         self._points1 += points
-        self.set_text(f"Score: {self._points1}")
+        self.set_text(f"Score101player: {self._points1}")
 
         self._points2 += points
-        self.set_text(f"Score: {self._points2}")
+        self.set_text(f"Score2: {self._points2}")
