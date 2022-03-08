@@ -95,11 +95,9 @@ class HandleCollisionsAction(Action):
             cast (Cast): The cast of Actors in the game.
         """
         if self._is_game_over:
-            # snake = cast.get_first_actor("snakes")
             cycles = cast.get_actors("cycles")
             cycle1 = cycles[0]
             cycle2 = cycles[1]
-            #segments = snake.get_segments()
             segments1 = cycle1.get_segments()
             segments2 = cycle2.get_segments()
             food = cast.get_first_actor("foods")
