@@ -63,5 +63,6 @@ root                    (project root folder)
 +-- cycle               (source code for game)
   +-- game              (specific game classes)
   +-- __main__.py       (entry point for program)
+  +-- constants.py      (game screen size)
 +-- README.md           (general info)
 ```
