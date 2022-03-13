@@ -23,8 +23,8 @@ def main():
     cast.add_actor("foods", Food())
     cast.add_actor("cycles", Cycle(constants.GREEN))
     cast.add_actor("cycles", Cycle(constants.BLUE))
-    cast.add_actor("scores", Score())
-    cast.add_actor("scores", Score())
+    cast.add_actor("scores", Score(Point(0,0)))
+    cast.add_actor("scores", Score(Point(constants.MAX_X - 100, 0)))
    
     # start the game
     keyboard_service = KeyboardService()

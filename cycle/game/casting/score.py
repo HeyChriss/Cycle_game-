@@ -1,4 +1,6 @@
+
 from game.casting.actor import Actor
+
 
 
 class Score(Actor):
@@ -12,10 +14,10 @@ class Score(Actor):
     Attributes:
         _points (int): The points earned in the game.
     """
-    def __init__(self):
+    def __init__(self, position):
         super().__init__()
-        self._points1 = 0
-        self._points2 = 0
+        self._points = 0
+        self._position = position
         self.add_points(0)
 
     def add_points(self, points):
@@ -24,8 +26,5 @@ class Score(Actor):
         Args:
             points (int): The points to add.
         """
-        self._points1 += points
-        self.set_text(f"Score101player: {self._points1}")
-
-        self._points2 += points
-        self.set_text(f"Score2: {self._points2}")
+        self._points += points
+        self.set_text(f"Score: {self._points}")
